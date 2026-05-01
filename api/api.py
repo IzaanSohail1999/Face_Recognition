@@ -22,9 +22,6 @@ class JSONEncoder(json.JSONEncoder):
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-client = MongoClient(
-    "mongodb+srv://usama:usama@izaan.0y3eq.mongodb.net/Izaan?retryWrites=true&w=majority", ssl_cert_reqs=ssl.CERT_NONE)
-
 
 @app.route('/citizen', methods=['POST' , "PUT" , "GET", "DELETE"] )
 def citizen():
